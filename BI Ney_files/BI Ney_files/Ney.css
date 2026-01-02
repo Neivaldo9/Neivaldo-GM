@@ -1,0 +1,164 @@
+/* ==================================== */
+/* 1. ESTILOS GERAIS DA PÁGINA E CONTAINER */
+/* ==================================== */
+body {
+    /* Define a fonte Inter para todo o corpo */
+    font-family: 'Inter', sans-serif; 
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9; /* Fundo cinza claro */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* Espaçamento entre o formulário e o BI */
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+}
+
+/* ==================================== */
+/* 2. ESTILOS DO FORMULÁRIO (BI-FORM) */
+/* ==================================== */
+.bi-form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.bi-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.bi-form input[type="text"],
+.bi-form input[type="date"],
+.bi-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+/* ==================================== */
+/* 3. ESTILOS DO BILHETE DE IDENTIDADE (BI) */
+/* ==================================== */
+.bi-wrapper {
+    /* O contêiner principal do BI, será o "cartão" */
+    width: 600px;height: 350px;
+    background-color: #e8f5e9; /* Fundo VERDE CLARO para a área do BI */
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* CABEÇALHO: Emblema, Título, Bandeira */
+.bi-header {
+    display: flex;
+    /* Alinha os itens na horizontal */
+    justify-content: space-between; 
+    /* Centraliza os itens verticalmente */
+    align-items: center; 
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    /* Linha sutil para separar o cabeçalho */
+    border-bottom: 1px solid #ccf; 
+}
+
+.bi-header .state-logo {
+    /* Espaço reservado para o Emblema */
+    width: 60px;
+    height: 60px;
+    background-color: #e8f5e9; /* Cor escura para o Emblema (placeholder) */url(../../Users/DELL/Downloads/667px-Emblem_of_Mozambique.svg.png)
+    border-radius: 50%;
+}
+
+.bi-header .flag img {
+    /* Diminui a bandeira para o tamanho certo */
+    width: 50px; 
+    height: auto;
+}
+
+.bi-header .title {
+    text-align: center;
+    line-height: 1.2;
+}
+
+.bi-header .country {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.bi-header .docname {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #004d40; /* Cor escura para o nome do documento */
+}
+
+/* SEÇÃO PRINCIPAL DO CARTÃO: Foto e Dados */
+.bi-card {
+    display: flex;
+    /* Alinha a foto com os dados */
+    gap: 20px; 
+    margin-top: 10px;
+    position: relative; /* Para posicionamento do side-data se necessário */
+}
+
+/* Área da Foto */
+.photo-area {
+    width: 120px;
+    height: 150px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+
+#person-photo {
+    width: 100%;
+    height: 100%;
+    /* Garante que a imagem preencha o espaço sem distorcer (corta bordas) */
+    object-fit: cover; 
+}
+
+/* Dados Principais */
+.main-data {
+    flex-grow: 1; /* Permite que o bloco de dados ocupe o espaço restante */
+}
+
+.main-data .row {
+    margin-bottom: 2px;
+    line-height: 0.9;
+}
+
+.main-data .label {
+    font-weight: 600;
+    color: #333;
+    /* Garante que o label tenha uma largura mínima para alinhamento */
+    display: inline-block; 
+    width: 120px; 
+}
+
+/* Dados Laterais (Altura, Sexo) */
+.side-data {
+    /* Estilos para alinhar Altura e Sexo */
+    position: absolute;
+    top: 0; /* Ajuste a posição vertical */
+    right: 0; 
+    width: 150px;
+}
+
+.side-data .label {
+    font-weight: 600;
+    color: #333;
+    display: inline-block; 
+    width: 60px;
+}
